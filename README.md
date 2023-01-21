@@ -44,9 +44,8 @@ uvicorn service.main:app --reload
 |/login|POST|N|로그인|[보기](/readme_img/login.png)|
 |/token|POST|N|새로운 access token 발급|[보기](/readme_img/token.png)|
 |/logout|POST|Y|로그아웃|[보기](/readme_img/)|
-
-|API 주소|method|token 인증|설명|요청/반환값|
-|---|---|---|---|---|
+||||||
+||||||
 |/account-book|GET|Y|사용자가 작성한 모든 세부내역 조회|[보기](/readme_img/get_all_account.png)|
 |/account-book|POST|Y|세부내역 작성|[보기](/readme_img/write_account.png)|
 |/account-book/{id}|GET|Y|하나의 세부내역 조회|[보기](/readme_img/get_one_account.png)|
@@ -54,9 +53,8 @@ uvicorn service.main:app --reload
 |/account-book/{id}/update|POST|Y|세부내역 수정|[보기](/readme_img/update_account.png)|
 |/account-book/{id}/copy|POST|Y|세부내역 복제|[보기](/readme_img/copy_account.png)|
 |/account-book/{id}/delete|POST|Y|세부내역 삭제|[보기](/readme_img/delete_account.png)|
-
-|API 주소|method|token 인증|설명|요청/반환값|
-|---|---|---|---|---|
+|||||||
+||||||
 |/url/{code}|GET|N|공유 url 접근시 세부내역 보여줌|[보기](/readme_img/url_code.png)|
 
 ---
