@@ -77,8 +77,8 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQzNTA3NzksInVzZXJfaWQiOjF9.XN1QwYstj0pzZ_moRM_9XFbKzvuI32X5QrypIpOOxmk' \
   -d '{
-  "email": "user@example.com",
-  "password": "string"
+  "amount": 10000,
+  "memo": "shopping"
 }'
 ~~~
 ---
