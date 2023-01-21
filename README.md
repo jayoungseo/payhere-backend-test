@@ -43,7 +43,7 @@ uvicorn service.main:app --reload
 |/signup|POST|N|회원가입|[보기](/readme_img/signup.png)|
 |/login|POST|N|로그인|[보기](/readme_img/login.png)|
 |/token|POST|N|새로운 access token 발급|[보기](/readme_img/token.png)|
-|/logout|POST|Y|로그아웃|[보기](/readme_img/)|
+|/logout|POST|Y|로그아웃|[보기](/readme_img/logout.png)|
 ||||||
 ||||||
 |/account-book|GET|Y|사용자가 작성한 모든 세부내역 조회|[보기](/readme_img/get_all_account.png)|
@@ -57,6 +57,30 @@ uvicorn service.main:app --reload
 ||||||
 |/url/{code}|GET|N|공유 url 접근시 세부내역 보여줌|[보기](/readme_img/url_code.png)|
 
+### Curl 예시
+- token 인증 필요없는 경우
+~~~bash
+curl -X 'POST' \
+  'http://localhost:8000/login' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "user@example.com",
+  "password": "string"
+}'
+~~~
+- token 인증 필요한 경우
+~~~bash
+curl -X 'POST' \
+  'http://localhost:8000/account-book' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQzNTA3NzksInVzZXJfaWQiOjF9.XN1QwYstj0pzZ_moRM_9XFbKzvuI32X5QrypIpOOxmk' \
+  -d '{
+  "email": "user@example.com",
+  "password": "string"
+}'
+~~~
 ---
 
 
