@@ -1,0 +1,12 @@
+version: '3'
+services:
+  local-db:
+    image: library/mysql:5.7
+    container_name: mysql
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - ./db_data/mysql/data:/var/lib/mysql
+    env_file:
+      - ./.env
+    platform: linux/amd64
